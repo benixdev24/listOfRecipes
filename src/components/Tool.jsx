@@ -5,7 +5,7 @@ export function Tool({ drugs, isVisibleEnter, isVisible, onClickEnter,  onClickH
     const [wordSearch, setWordSearch] = useState('');
 
     function handleChangeInInput(e) {
-        setWordSearch(e.target.value);
+        setWordSearch(e.target.value.toLowerCase());
     }
     
     useEffect(() => {
