@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ButtonEnter } from './ButtonEnter.jsx';
 
 export function Tool({ drugs, isVisibleEnter, isVisible, onClickEnter,  onClickHandleClick }) {
@@ -6,15 +6,9 @@ export function Tool({ drugs, isVisibleEnter, isVisible, onClickEnter,  onClickH
 
     function handleChangeInInput(e) {
         setWordSearch(e.target.value.toLowerCase());
-    }
-    
-    useEffect(() => {
-    // Llama a isVisibleEnter solo si wordSearch no está vacío
-    if (wordSearch.trim() !== '') {
         isVisibleEnter();
     }
-    }, [wordSearch, isVisibleEnter]);
-
+    
     return(
         <>
             <form className='flex relative w-11/12 justify-center'>
